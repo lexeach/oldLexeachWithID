@@ -318,9 +318,9 @@ const Dashboard = () => {
 
     // console.log("resonse value", value_);
 
-    let currentTokenAccepting = await ICU_.methods
-      .currentTokenAccepting()
-      .call();
+    //let currentTokenAccepting = await ICU_.methods
+      //.currentTokenAccepting()
+      //.call();
     //.on("error", console.error);
     // console.log("the user id", id);
     let ref_user_acc = await ICU_.methods.userList(id).call();
@@ -338,7 +338,7 @@ const Dashboard = () => {
     // console.log("the approve currentTokenAccepting", currentTokenAccepting);
     // the approve currentTokenAccepting ERC20-Token-Accepting
 
-    if (currentTokenAccepting === "Native-Coin-Accepting") {
+    //if (currentTokenAccepting === "Native-Coin-Accepting") {
       let USDT_ = new web3.eth.Contract(USDT.ABI, USDT.address);
       let isAllowance = await USDT_.methods
         .allowance(account, ICU.address)
